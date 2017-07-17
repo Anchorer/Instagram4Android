@@ -10,7 +10,7 @@ android {
 
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -27,12 +27,8 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    implementation 'com.android.support:appcompat-v7:25.3.1'
-    testImplementation 'junit:junit:4.12'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'commons-codec:commons-codec:1.10'
     provided 'org.projectlombok:lombok:1.16.16'
     annotationProcessor "org.projectlombok:lombok:1.16.16"
